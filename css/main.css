@@ -184,7 +184,7 @@ footer p {
     }
 }
 
-/* Slightly increases image size when viewport becomes =< 800px wide*/
+/* Slightly increases image size and line-height on the descpription list when viewport becomes =< 800px wide*/
 @media screen and (min-width: 800px) {
     #me {
         height: 600px;

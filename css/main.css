@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    /* Variables set to fonts for body and heading content (ff = font family) */
+    --ff-body: 'Roboto', sans-serif;
+    --ff-heading: 'Merriweather', serif;
+
+    /* Variables set for small (mobile-first) viewport font sizes  */
+    --fs-xl: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-regular: 1rem;
+}
+
+/* Font grows as viewport grows */
+@media (min-width: 550px) {
+    :root {
+        --fs-xl: 6rem;
+        --fs-h2: 3rem;
+        --fs-h3: 2rem;
+        --fs-regular: 1.5rem;
+    }
+}
+
+@media (min-width: 700px) {
+    :root {
+        --fs-xl: 8rem;
+        --fs-h2: 4rem;
+        --fs-h3: 3rem;
+        --fs-regular: 2rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:lightsalmon;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+    font-weight: bolder;
+    font-family: var(--ff-heading)
+}
+
+h2 {
+    font-size: var(--fs-h3);
+    font-weight: bold;
+    font-family: var(--ff-body)
+}
+
+dl {
+    font-size: var(--fs-regular);
+    line-height: 2rem;
+    
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: var(--ff-body)
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    background-color:lightcyan;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h2 {
+    font-style: italic;
+}
+
+/* Allows the lightgreen background color to bleed outside of its container to be full viewport width  */
+.full-bleed {
+   box-shadow: 0 0 0 100vmax lightgreen; 
+   clip-path: inset(0 -100vmax);
+}
+
+.about-me  {
+    background-color:lightgreen;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-me h2 {
+    margin-bottom: 2rem;
+    font-size: var(--fs-h2);
+}
+
+.about-me dt {
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: var(--ff-heading)
+}
+
+.about-me dd {
+    font-family: var(--ff-body);
+    margin-bottom: 1rem;
+}
+
+#me {
+    width: 200px;
+    height: 350px;
+    margin-right: 2rem;
+    box-shadow: 7px 7px 15px black;
+}
+
+footer {
+    background-color:lightsalmon;
+    padding: 1rem;
+    text-align: center;  
+}
+
+footer p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-h3);
+}
+
+/* Slightly increases image size when viewport becomes =< 550px wide*/
+@media screen and (min-width: 550px) {
+    #me {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+/* Slightly increases image size when viewport becomes =< 700px wide*/
+@media screen and (min-width: 700px) {
+    #me {
+        height: 650px;
+        width: 400px;
+    }
+
+    dl {
+        line-height: 3rem;
+        
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #me {
+        margin-right: 5rem;
+    }
+}
